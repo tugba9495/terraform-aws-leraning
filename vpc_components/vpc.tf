@@ -51,7 +51,7 @@ resource "aws_internet_gateway" "my_internet_gw" {
     }
   
 }
-resource "aws_internet_gateway_attachment "my_vpc_igw_attachment" {
+resource "aws_internet_gateway_attachment" "my_vpc_igw_attachment" {
   vpc_id               = aws_vpc.my_aws_vpc.id
   internet_gateway_id  = aws_internet_gateway.my_internet_gw.id
   
