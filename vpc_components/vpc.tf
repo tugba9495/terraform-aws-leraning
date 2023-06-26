@@ -68,5 +68,6 @@ resource "aws_route_table" "public_route_table" {
  resource "aws_route" "terraform_route" {
     route_table_id          = var.aws_route
     destination_cidr_block  = "0.0.0.0/0"
+    gateway_id =  aws_internet_gateway.my_internet_gw.id
 }
  
