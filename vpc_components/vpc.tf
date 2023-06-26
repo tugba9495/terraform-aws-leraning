@@ -66,9 +66,7 @@ resource "aws_route_table" "public_route_table" {
    
  }
  resource "aws_route" "terraform_route" {
-    route_table_id = aws_route_table.private_route_table
-    destination_cidr_block = "0.0.0.0/0"
-   
- }
-
-
+    route_table_id          = var.aws_route
+    destination_cidr_block  = "0.0.0.0/0"
+}
+ 
